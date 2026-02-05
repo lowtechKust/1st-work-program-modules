@@ -1,0 +1,102 @@
+//1
+let n = 0;
+
+if (n > 0) { 
+  console.log("positive"); 
+} else if (n < 0) { 
+  console.log("negative"); 
+} else {
+  console.log("zero"); 
+}
+
+//2 
+let a = 12;
+let b = 7;
+
+if (a < b) { 
+  console.log(a);
+} else { 
+  console.log(b); 
+}
+
+//3 
+let с = 15;
+
+if (с % 3 === 0) { 
+  console.log("yes");
+} else { // Иначе
+  console.log("no"); 
+}
+
+//4 
+let N = 7;
+let sum = 0;
+
+for (let i = 1; i <= N; i++) {
+  sum += i; 
+}
+
+console.log(sum); 
+
+//5 
+for (let i = 1; i <= 15; i += 2) { 
+  console.log(i); 
+}
+
+//6
+let count = 0;
+
+for (let i = 1; i <= 20; i++) { 
+  if (i % 2 === 0) { 
+    count++; 
+  }
+}
+
+console.log(count);
+
+//7
+let string = "banana";
+let count = 0;
+
+for (let i = 0; i < string.length; i++) { 
+  if (string[i] === "a") {
+    count++;
+  }
+}
+
+console.log(count);
+
+//8
+let string = "hello";
+let reversedString = "";
+
+for (let i = string.length - 1; i >= 0; i--) {
+  reversedString += string[i]; 
+}
+
+console.log(reversedString); 
+
+//9 
+let num = 4;
+
+for (let i = 1; i <= 10; i++) { 
+  console.log(num + " * " + i + " = " + (num * i)); 
+}
+
+//10
+let stars = "";
+
+for (let i = 0; i < 4; i++) { 
+  stars += "*"; 
+  console.log(stars); 
+}
+
+//11 
+let N = 30;
+let sum = 0;
+
+for (let i = 1; i <= N; i++) { 
+  if (i % 3 === 0 || i % 5 === 0) { 
+    sum += i; 
+  }
+}
