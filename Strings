@@ -1,0 +1,42 @@
+//1
+let str = "JavaScript";
+let substr = str.slice(4, 10); 
+console.log(substr);
+
+//2
+let str1 = "report.pdf";
+let str2 = str1.slice(0,2); 
+let str22 = str2.includes("rep");
+let str3 = str1.slice(-1,-4);
+let str32 = str3.includes(".pdf");
+if ( str22 = true) {
+    console.log("true");
+}
+else{
+    console.log("false");
+}
+
+//3
+let sentence = "I like cats";
+
+let newSentence = sentence.replace("cats", "dogs");
+
+console.log(`"${newSentence}"`);
+
+//4
+let fruitsString = "apple,banana,orange,apple";
+
+let fruitsArray = fruitsString.split(',');
+
+let appleCount = fruitsArray.filter(fruit => fruit === "apple").length;
+
+console.log(` ${appleCount} раз.`); 
+
+
+ 
+//5
+let infoString = "My phone number is 12345 and my code is 67890";
+
+let numbersOnlyString = infoString.replace(/\D/g, '');
+
+console.log(`Только числа: "${numbersOnlyString}"`); 
