@@ -1,0 +1,122 @@
+//1
+let str = "JavaScript";
+let substr = str.slice(4, 10); 
+console.log(substr);
+
+//2
+let fileName = "report.pdf";
+
+let startsWithRep = fileName.startsWith("rep");
+let endsWithPdf = fileName.endsWith(".pdf");
+
+console.log(`Начинается с "rep": ${startsWithRep}`); 
+console.log(`Заканчивается на ".pdf": ${endsWithPdf}`); 
+
+if (startsWithRep && endsWithPdf) {
+  console.log("Файл имеет корректное расширение.");
+} else {
+  console.log("Файл имеет некорректное расширение.");
+}
+
+//3
+let sentence = "I like cats";
+let newSentence = sentence.replace("cats", "dogs");
+
+console.log(newSentence); 
+
+//4
+let fruitsString = "apple,banana,orange,apple";
+let fruitsArray = fruitsString.split(','); 
+
+let appleCount = 0;
+for (let i = 0; i < fruitsArray.length; i++) {
+  if (fruitsArray[i] === "apple") {
+    appleCount++;
+  }
+}
+console.log(`Массив фруктов: ${fruitsArray}`); 
+console.log(`Слово "apple" встречается ${appleCount} раз.`); 
+
+//6
+let greeting = "Hello World From JS";
+
+let firstSpaceIndex = greeting.indexOf(' ');
+
+let firstWord = greeting.slice(0, firstSpaceIndex);
+let restOfString = greeting.slice(firstSpaceIndex + 1); 
+
+let newGreeting = firstWord.toLowerCase() + ' ' + restOfString;
+
+console.log(newGreeting); 
+
+//7
+let message = "JavaScript is a cool language";
+let censoredMessage = message.replace("cool", "****");
+
+console.log(censoredMessage); 
+
+//8
+let email = "user@example.com";
+
+let hasAtSymbol = email.includes("@");
+let hasDot = email.includes(".");
+
+if (hasAtSymbol && hasDot) {
+  console.log("Email valid");
+} else {
+  console.log("Invalid");
+}
+
+//9
+function generateAbbreviation(phrase) {
+
+  let words = phrase.split(' ');
+
+ 
+  let firstLetters = [];
+
+
+  for (let i = 0; i < words.length; i++) {
+   
+    if (words[i].length > 0) {
+    
+      firstLetters.push(words[i][0]);
+    }
+  }
+
+ 
+  return firstLetters.join('').toUpperCase();
+}
+
+let fullPhrase = "Java Script Object Notation";
+let abbreviation = generateAbbreviation(fullPhrase);
+console.log(`Полная фраза: "${fullPhrase}"`);
+console.log(`Аббревиатура: "${abbreviation}"`); 
+
+//10
+let sentenceForLongestWord = "I love learning JavaScript programming";
+
+let wordsArray = sentenceForLongestWord.split(' ');
+
+let longestWord = ""; 
+
+for (let i = 0; i < wordsArray.length; i++) {
+
+  if (wordsArray[i].length > longestWord.length) {
+    longestWord = wordsArray[i]; 
+  }
+}
+
+console.log(`Строка: "${sentenceForLongestWord}"`);
+console.log(`Самое длинное слово: "${longestWord}"`); 
+
+//11
+let email1 = "user@example.com";
+let atSymbolIndex = email1.indexOf('@');
+if (atSymbolIndex !== -1) {
+  let domain = email1.slice(atSymbolIndex + 1);
+  console.log(`Исходный email: "${email1}"`);
+  console.log(`Домен: "${domain}"`);
+} else {
+  console.log(`В строке "${email1}" не найден символ '@', невозможно извлечь домен.`);
+}
