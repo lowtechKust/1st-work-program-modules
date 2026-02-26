@@ -1,0 +1,130 @@
+//1
+let arr = [1,2];
+arr.push(3,4);
+console.log(arr);
+
+//2
+let lost = arr.pop();
+console.log(lost);
+console.log(arr);
+
+//3
+let arr1 = [10,20,30,40];
+console.log(arr.includes(100));
+
+//4
+let arr2 = [5,10,15,20,25];
+let rezka = arr2.slice(1,4);
+console.log(rezka);
+
+//5
+let arr3 = [1, 2, 3, 4];
+let intr = arr3.splice(1, 2, "y", "X");
+console.log(intr);
+console.log(arr3);
+
+//6
+let arr4 = [2, 4, 6];
+let umnoj = arr4.map(x => x * 10);
+console.log(umnoj);
+
+//7
+let arr5 = [1, 2, 3, 4, 5, 6];
+let sort = arr5.filter(x => x % 2 === 0);
+console.log(sort);
+
+//8
+let arr6 = [10, 20, 30, 40];
+let red = arr6.reduce((acc, x) => acc + x, 0);
+console.log(red);
+
+//9
+let users = [
+    {id:1, name:"Anna"},
+    {id:2, name:"Ivan"},
+    {id:3, name:"Olga"}
+    ];
+    console.log(users.find(x => x.name === "Ivan"));
+
+//10
+let arr7 = [100, 5, 20, 15];
+console.log(arr7.sort((a, b) => a - b))
+
+//11
+const users = [  {id: 1, name: "Anna", age: 25, city: "Moscow", salary: 80000},
+  {id: 2, name: "Ivan", age: 30, city: "SPb", salary: 120000},
+  {id: 3, name: "Olga", age: 22, city: "Moscow", salary: 60000},
+  {id: 4, name: "Alex", age: 35, city: "SPb", salary: 150000}
+];
+
+let t = users.filter(u => u.city === "Moscow" && u.age > 20).sort((a, b) => a - b);
+console.log(t);
+
+//11
+const users = [  {id: 1, name: "Anna", age: 25, city: "Moscow", salary: 80000},
+  {id: 2, name: "Ivan", age: 30, city: "SPb", salary: 120000},
+  {id: 3, name: "Olga", age: 22, city: "Moscow", salary: 60000},
+  {id: 4, name: "Alex", age: 35, city: "SPb", salary: 150000}
+];
+
+let t = users.filter(u => u.city === "Moscow" && u.age > 20).sort((a, b) => a - b);
+console.log(t);
+
+//12
+const matrix = [  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+];
+ result = matrix.reduce(function(a, b) { return a.concat(b); });
+
+ fr = result.filter(num => num % 2 !== 0); // [1, 3, 5, 7, 9]
+
+ multipliedNumbers = fr.map(num => num * 2); // [2, 6, 10, 14, 18]
+
+ sortedArray = multipliedNumbers.sort((a, b) => a - b); // [2, 6, 10, 14, 18]
+
+console.log(sortedArray);
+
+//13
+const products = [
+  {id: 1, name: "Ноутбук", price: 25000},
+  {id: 2, name: "Мышь", price: 800},
+  {id: 3, name: "Клавиатура", price: 1200},
+  {id: 4, name: "Наушники", price: 1500}
+];
+
+filteredProducts = products.filter(product => product.price < 1000);
+
+sortedFilteredProducts = filteredProducts.sort((a, b) => a.price - b.price);
+
+console.log(sortedFilteredProducts);
+
+//14
+const users1 = [
+  {id: 1, name: "Иван", email: "ivan@mail.com"},
+  {id: 2, name: "Мария", email: "maria@mail.com"},
+  {id: 3, name: "Алексей", email: "alex@mail.com"}
+];
+
+ searchEmail = "maria@mail.com";
+
+ foundUser = users1.find(user => user.email === searchEmail);
+
+console.log(foundUser);
+
+const searchEmailNotFound = "unknown@mail.com";
+const notFoundUser = users.find(user => user.email === searchEmailNotFound);
+console.log(notFoundUser);
+
+//15
+const cartItems = [
+  {id: 1, name: "Футболка", price: 500, quantity: 2},
+  {id: 2, name: "Джинсы", price: 2000, quantity: 1},
+  {id: 3, name: "Кроссовки", price: 3000, quantity: 1}
+];
+
+ totalAmount = cartItems.reduce((total, item) => {
+  return total + (item.price * item.quantity);
+}, 0);
+
+console.log(totalAmount);
