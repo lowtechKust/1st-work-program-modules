@@ -55,3 +55,11 @@ function getUserValue(user, key) {
 }
 
 //11
+const user = { name: "Ann", age: 20 };
+
+function hasAge(user) {
+    return typeof user.age !== 'undefined';
+}
+
+//12
+
