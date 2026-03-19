@@ -3,14 +3,21 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Изменение текста</title>
 </head>
 <body>
+
+    <!-- Создаем элемент h1 с id="title" -->
     <h1 id="title">Привет!</h1>
+
     <script>
-        document.getElementById("title").textContent = "Добро пожаловать!";
+        const headingElement = document.getElementById('title');
+
+        if (headingElement) {
+            headingElement.textContent = "Добро пожаловать!";
+        }
     </script>
+
 </body>
 </html>
 
@@ -18,22 +25,27 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Подсчет параграфов</title>
+    <meta charset="UTF-8">
+    <title>Работа с элементами</title>
 </head>
 <body>
- <h1 id="title">Привет!</h1>
- <p>Первый параграф.</p>
- <p>Второй параграф.</p>
- <p>Третий параграф.</p>
 
- <script>
-   // Получаем все параграфы на странице
-   const paragraphs = document.getElementsByTagName("p");
-   // Выводим количество параграфов в alert
-   alert("Количество параграфов: " + paragraphs.length);
- </script>
+    <h1 id="title">Привет!</h1>
+
+    <!-- Добавляем три абзаца -->
+    <p>Первый абзац</p>
+    <p>Второй абзац</p>
+    <p>Третий абзац</p>
+
+    <script>
+        const headingElement = document.getElementById('title');
+        headingElement.textContent = "Добро пожаловать!";
+
+        const paragraphs = document.querySelectorAll('p');
+
+        alert("Количество абзацев на странице: " + paragraphs.length);
+    </script>
+
 </body>
 </html>
 
@@ -42,18 +54,99 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ссылка с JavaScript</title>
+    <title>Работа с атрибутами</title>
 </head>
 <body>
+
+    <h1 id="title">Привет!</h1>
+
+    <p>Абзац 1</p>
+    <p>Абзац 2</p>
+    <p>Абзац 3</p>
+
+    <!-- Создаем ссылку с ID, чтобы было удобно к ней обратиться -->
     <a id="myLink">Перейти</a>
 
     <script>
-        // Получаем ссылку по идентификатору
-        const link = document.getElementById("myLink");
-        // Добавляем атрибуты href и target
-        link.href = "https://google.com";
-        link.target = "_blank"; // Открытие ссылки в новой вкладке
+        document.getElementById('title').textContent = "Добро пожаловать!";
+
+        const paragraphs = document.querySelectorAll('p');
+        alert("Количество абзацев: " + paragraphs.length);
+
+        const link = document.getElementById('myLink');
+        
+        link.setAttribute('href', 'https://google.com');
+        
+        link.setAttribute('target', '_blank');
+        
+        link.style.color = 'blue';
+        link.style.textDecoration = 'underline';
+        link.style.cursor = 'pointer';
     </script>
+
+</body>
+</html>
+
+//4
+<script>
+    document.getElementById('title').textContent = "Добро пожаловать!";
+
+    const paragraphs = document.querySelectorAll('p');
+    alert("Количество абзацев: " + paragraphs.length);
+
+    const link = document.getElementById('myLink');
+    link.setAttribute('href', 'https://google.com');
+    link.setAttribute('target', '_blank');
+
+    const firstParagraph = paragraphs[0];
+    
+    firstParagraph.style.color = 'red';      // Меняем цвет
+    firstParagraph.style.fontSize = '20px';  // Меняем размер шрифта
+</script>
+
+//5
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Работа с изображениями</title>
+</head>
+<body>
+
+    <h1 id="title">Привет!</h1>
+
+    <p>Абзац 1</p>
+    <p>Абзац 2</p>
+    <p>Абзац 3</p>
+
+    <a id="myLink">Перейти</a>
+    
+    <hr>
+
+    <img id="myImage" src="initial_placeholder.jpg" alt="Начальное изображение" width="200">
+
+    <script>
+        document.getElementById('title').textContent = "Добро пожаловать!";
+        const paragraphs = document.querySelectorAll('p');
+        alert("Количество абзацев: " + paragraphs.length);
+        
+        const link = document.getElementById('myLink');
+        link.setAttribute('href', 'https://google.com');
+        link.setAttribute('target', '_blank');
+        
+        // Стилизация первого абзаца
+        paragraphs[0].style.color = 'red';
+        paragraphs[0].style.fontSize = '20px';
+
+        const imageElement = document.getElementById('myImage');
+        
+        const newImageUrl = 'https://via.placeholder.com/200x150/0000FF/FFFFFF?text=Новая+Картинка';
+        
+        imageElement.setAttribute('src', newImageUrl);
+
+        imageElement.setAttribute('alt', 'Загружено новое изображение');
+        
+    </script>
+
 </body>
 </html>
